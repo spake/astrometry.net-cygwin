@@ -1,0 +1,14 @@
+PYTHON_WHEEL_VERSIONS=3.7
+inherit python-wheel
+
+NAME="python37-astropy"
+VERSION=3.2.3
+RELEASE=1
+
+CATEGORY="Science"
+SUMMARY="Community-developed python astronomy tools"
+DESCRIPTION="The Astropy Project is a community effort to develop a common core package for Astronomy in Python and foster an ecosystem of interoperable astronomy packages."
+
+SRC_URI="https://files.pythonhosted.org/packages/b7/ce/41c4abe97240ce5bafe98c70d8671441a65d1d3a5b8a877d9103edb480e3/astropy-3.2.3.tar.gz"
+
+DEPEND="python37-devel python37-numpy python37-wheel"

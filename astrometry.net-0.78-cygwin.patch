@@ -1,0 +1,366 @@
+diff --git a/Makefile b/Makefile
+index fd878813..37f6686e 100644
+--- a/Makefile
++++ b/Makefile
+@@ -147,12 +147,10 @@ install-core:
+ 	$(MKDIR) '$(DOC_INSTALL_DIR)'
+ 	$(MKDIR) '$(INCLUDE_INSTALL_DIR)'
+ 	$(MKDIR) '$(LIB_INSTALL_DIR)'
+-	$(MKDIR) '$(EXAMPLE_INSTALL_DIR)'
+ 	$(MKDIR) '$(PY_BASE_INSTALL_DIR)'
+ 	$(MKDIR) '$(MAN1_INSTALL_DIR)'
+ 	$(CP) __init__.py '$(PY_BASE_INSTALL_DIR)'
+ 	$(CP) CREDITS LICENSE README.md report.txt '$(DOC_INSTALL_DIR)'
+-	$(CP) demo/* '$(EXAMPLE_INSTALL_DIR)'
+ 	$(CP) man/*.1 '$(MAN1_INSTALL_DIR)'
+ 	$(MAKE) -C util  install-core
+ 	$(MAKE) -C catalogs install
+diff --git a/bin/degtohms b/bin/degtohms
+index acb8cf1a..8a3e159c 100755
+--- a/bin/degtohms
++++ b/bin/degtohms
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/bin/hmstodeg b/bin/hmstodeg
+index 7376fa19..9cdc18cb 100755
+--- a/bin/hmstodeg
++++ b/bin/hmstodeg
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/bin/image2pnm b/bin/image2pnm
+index c44497c3..bc6211c2 100755
+--- a/bin/image2pnm
++++ b/bin/image2pnm
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ from __future__ import print_function
+ from __future__ import absolute_import
+ import sys
+diff --git a/bin/merge-columns b/bin/merge-columns
+index 53b9d3ae..acbfe5b7 100755
+--- a/bin/merge-columns
++++ b/bin/merge-columns
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/bin/removelines b/bin/removelines
+index 5f2b9a44..19b42f59 100755
+--- a/bin/removelines
++++ b/bin/removelines
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ from __future__ import print_function
+ from __future__ import absolute_import
+ import sys
+diff --git a/bin/text2fits b/bin/text2fits
+index 33d8b539..67e996b2 100755
+--- a/bin/text2fits
++++ b/bin/text2fits
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ import sys
+diff --git a/bin/uniformize b/bin/uniformize
+index 3dd6c9cf..7fa82612 100755
+--- a/bin/uniformize
++++ b/bin/uniformize
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ from __future__ import print_function
+ from __future__ import absolute_import
+ import sys
+diff --git a/bin/votabletofits b/bin/votabletofits
+index e9a199a3..58aa6dc1 100755
+--- a/bin/votabletofits
++++ b/bin/votabletofits
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ import sys
+diff --git a/blind/plotann.py b/blind/plotann.py
+index cb8c7ba9..83c8d629 100755
+--- a/blind/plotann.py
++++ b/blind/plotann.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/blind/plotindex.py b/blind/plotindex.py
+index 575151e8..7abfa325 100644
+--- a/blind/plotindex.py
++++ b/blind/plotindex.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/blind/whynot.py b/blind/whynot.py
+index a51d7c6d..0d884927 100755
+--- a/blind/whynot.py
++++ b/blind/whynot.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/sdss/fields.py b/sdss/fields.py
+index 5c0161e2..7ee48fb7 100755
+--- a/sdss/fields.py
++++ b/sdss/fields.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/sdss/sdss_das.py b/sdss/sdss_das.py
+index 509a8ee3..411a96b8 100755
+--- a/sdss/sdss_das.py
++++ b/sdss/sdss_das.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ from __future__ import print_function
+ 
+ from astrometry.util.run_command import run_command
+diff --git a/util/2mass_catalog.py b/util/2mass_catalog.py
+index dd3d84ab..93ea3117 100755
+--- a/util/2mass_catalog.py
++++ b/util/2mass_catalog.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+ import sys
+diff --git a/util/2mass_get.py b/util/2mass_get.py
+index 14e6f854..8e9b1a97 100755
+--- a/util/2mass_get.py
++++ b/util/2mass_get.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/EXIF.py b/util/EXIF.py
+index 21ac5299..aab35982 100755
+--- a/util/EXIF.py
++++ b/util/EXIF.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3.7
+ # -*- coding: utf-8 -*-
+ #
+ # Library to extract EXIF information from digital camera image files
+diff --git a/util/casjobs.py b/util/casjobs.py
+index 99cd417e..91fb8860 100755
+--- a/util/casjobs.py
++++ b/util/casjobs.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/image2pnm.py b/util/image2pnm.py
+index 0f422894..824b0077 100755
+--- a/util/image2pnm.py
++++ b/util/image2pnm.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ """
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+diff --git a/util/index-demo.py b/util/index-demo.py
+index 0f1abec5..c5829d82 100644
+--- a/util/index-demo.py
++++ b/util/index-demo.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/index-stats.py b/util/index-stats.py
+index 6b306d78..0789170b 100755
+--- a/util/index-stats.py
++++ b/util/index-stats.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/make-wcs.py b/util/make-wcs.py
+index b1b1db94..47ff8e60 100755
+--- a/util/make-wcs.py
++++ b/util/make-wcs.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/makefile.common b/util/makefile.common
+index 1019ac22..896e5f77 100644
+--- a/util/makefile.common
++++ b/util/makefile.common
+@@ -4,13 +4,13 @@
+ INCLUDE_BASE_DIR := $(BASEDIR)/include
+ INCLUDE_DIR := $(INCLUDE_BASE_DIR)/astrometry
+ 
+-PYTHON ?= python
++PYTHON ?= python3.7
+ INSTALL_DIR ?= /usr/local/astrometry
+ # Put INSTALL_DIR in the environment of commands run by Make.
+ export INSTALL_DIR
+ 
+ # don't change this one -- it must match what is in the bin/* scripts.
+-PYTHON_SCRIPT_DEFAULT := /usr/bin/env python
++PYTHON_SCRIPT_DEFAULT := /usr/bin/env python3.7
+ 
+ # change this if you want to set exactly which python program gets run to
+ # execute the python scripts in bin/ (image2pnm and friends).
+@@ -30,7 +30,6 @@ PY_BASE_LINK_DIR ?= ../lib/python/astrometry
+ ETC_INSTALL_DIR ?= $(INSTALL_DIR)/etc
+ MAN1_INSTALL_DIR ?= $(INSTALL_DIR)/share/man/man1
+ DOC_INSTALL_DIR ?= $(INSTALL_DIR)/doc
+-EXAMPLE_INSTALL_DIR ?= $(INSTALL_DIR)/examples
+ 
+ # If your build system stages an install in one place (say, a temp
+ # dir) and then copies everything to the final install place, (eg,
+diff --git a/util/makefile.netpbm b/util/makefile.netpbm
+index 96f6d2db..94516f8c 100644
+--- a/util/makefile.netpbm
++++ b/util/makefile.netpbm
+@@ -1,5 +1,5 @@
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ 
+-NETPBM_INC ?=
++NETPBM_INC ?= -I/usr/include/netpbm
+ NETPBM_LIB ?= -L. -lnetpbm
+diff --git a/util/plotSipDistortion.py b/util/plotSipDistortion.py
+index 19c28eb2..2148fb43 100755
+--- a/util/plotSipDistortion.py
++++ b/util/plotSipDistortion.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ if __name__ == '__main__':
+diff --git a/util/plotshift.py b/util/plotshift.py
+index 2e522ebc..a06f860b 100755
+--- a/util/plotshift.py
++++ b/util/plotshift.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ 
+diff --git a/util/removelines.py b/util/removelines.py
+index 80e87c20..e5fac760 100755
+--- a/util/removelines.py
++++ b/util/removelines.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/removelines_general.py b/util/removelines_general.py
+index 748a5fcf..a7c4f4da 100755
+--- a/util/removelines_general.py
++++ b/util/removelines_general.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/removelines_rotate.py b/util/removelines_rotate.py
+index d7860a6f..b8ab3833 100755
+--- a/util/removelines_rotate.py
++++ b/util/removelines_rotate.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/uniformize.py b/util/uniformize.py
+index ee1f1086..f8ae3da7 100755
+--- a/util/uniformize.py
++++ b/util/uniformize.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/usnob_catalog.py b/util/usnob_catalog.py
+index 808a884d..dc7c74ca 100755
+--- a/util/usnob_catalog.py
++++ b/util/usnob_catalog.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/usnob_get_image.py b/util/usnob_get_image.py
+index c065646c..44d583d2 100755
+--- a/util/usnob_get_image.py
++++ b/util/usnob_get_image.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/usnob_get_region.py b/util/usnob_get_region.py
+index b9827450..8dee8b84 100755
+--- a/util/usnob_get_region.py
++++ b/util/usnob_get_region.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ from __future__ import print_function
+diff --git a/util/usnob_trim.py b/util/usnob_trim.py
+index 9f8d3757..d1a4a499 100644
+--- a/util/usnob_trim.py
++++ b/util/usnob_trim.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.7
+ # This file is part of the Astrometry.net suite.
+ # Licensed under a 3-clause BSD style license - see LICENSE
+ 

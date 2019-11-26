@@ -1,0 +1,31 @@
+NAME="astrometry.net"
+VERSION=0.78
+RELEASE=1
+
+CATEGORY="Science"
+SUMMARY="Automatic recognition of astronomical images"
+DESCRIPTION="Automatic recognition of astronomical images; or standards-compliant astrometric metadata from data."
+
+SRC_URI="http://astrometry.net/downloads/astrometry.net-0.78.tar.gz"
+SRC_DIR="astrometry.net-0.78"
+PATCH_URI="astrometry.net-0.78-cygwin.patch"
+
+DEPEND="gcc-core make libcairo-devel libcfitsio-devel libjpeg-devel libnetpbm-devel libpng-devel python37-devel swig"
+REQUIRES="netpbm python37-astropy"
+
+MAKEOPTS="-j1"
+USE_DESTDIR=0
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake all py extra
+}
+
+src_install() {
+	cd ${B}
+	cyginstall INSTALL_DIR=${D} DATA_FINAL_DIR=/usr/share/astrometry
+	mkdir -p ${D}/usr/share/astrometry
+	keepdir /usr/share/astrometry
+	rm -rf ${D}/doc
+}
